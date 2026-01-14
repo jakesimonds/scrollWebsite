@@ -1,0 +1,205 @@
+/* Fixed video background - full width, cropped to fit */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 830px;
+  height: 100vh !important;
+  z-index: -1;
+  object-fit: cover !important;
+  object-position: center 30%;
+  transition: opacity 0.3s ease;
+}
+
+.video-background.hidden {
+  opacity: 0;
+}
+
+/* Still image background for Connect section */
+.image-background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 830px;
+  height: 100vh;
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-background.visible {
+  opacity: 1;
+}
+
+/* Black bars on sides when wider than 830px */
+html {
+  background: #000;
+}
+
+/* Fixed header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header a:hover,
+.header a.active {
+  color: #fff;
+}
+
+/* Main content container - scroll snap */
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Each section is full viewport height and snaps */
+.section {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+/* Hero section - minimal overlay so video shows through */
+.section-hero {
+  background: transparent;
+}
+
+.section-hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section-hero .tagline {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Content cards - semi-transparent so video shows through */
+.section-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-card h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+.section-card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.section-card article {
+  text-align: left;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #000;
+}
+
+.button-large {
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+}
+
+/* Socials links */
+.socials-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* CTA section */
+.section-cta .section-card {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-hero .tagline {
+    font-size: 1.1rem;
+  }
+
+  .section-card {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .header nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
