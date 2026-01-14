@@ -136,6 +136,24 @@ function App() {
           <div className="section-card">
             <h2>{siteConfig.services.heading}</h2>
             <p>{siteConfig.services.description}</p>
+            <div className="button-group">
+              <a
+                href={siteConfig.services.button1Link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-large"
+              >
+                {siteConfig.services.button1Text}
+              </a>
+              <a
+                href={siteConfig.services.button2Link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button-large"
+              >
+                {siteConfig.services.button2Text}
+              </a>
+            </div>
           </div>
         </section>
 
@@ -143,15 +161,15 @@ function App() {
           <div className="section-card">
             <h2>{siteConfig.connect.heading}</h2>
             <p>{siteConfig.connect.description}</p>
-            <a
-              href={siteConfig.connect.buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button button-large"
-            >
-              {siteConfig.connect.buttonText}
-            </a>
           </div>
+          <a
+            href={siteConfig.connect.buttonLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="triangle-button"
+          >
+            <span>cal.com link</span>
+          </a>
         </section>
       </main>
     </div>

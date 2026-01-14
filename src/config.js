@@ -8,18 +8,18 @@ export const siteConfig = {
 
   // Blog section
   blog: {
-    heading: "I do blog",
+    heading: "I do blog!",
     postDescription: "I write about open social, LLMs, and sometimes interview people on the best platform ever (leaflet)",
     buttonText: "Read it",
-    buttonLink: "https://cal.com",
+    buttonLink: "https://jakesimonds.leaflet.pub/",
   },
 
   // Socials section
   socials: {
-    heading: "Socials",
-    description: "I am jakesimonds.com everywhere that lets me be jakesimonds.com",
+    heading: "Socials (ATProto most active)",
+    description: " email is great, too jakesimonds at gmail ",
     links: [
-      { name: "ATProto(bbluesky)", url: "https://bsky.app/profile/jakesimonds.com" },
+      { name: "ATProto (aka bluesky)", url: "https://bsky.app/profile/jakesimonds.com" },
       { name: "GitHub", url: "https://github.com/jakesimonds" },
       { name: "Linkedin", url: "https://www.linkedin.com/in/jake-simonds/" },
       { name: "Mastodon", url: "https://mastodon.social/@jakesimonds.com@bsky.brid.gy" },
@@ -29,14 +29,18 @@ export const siteConfig = {
 
   // About section
   about: {
-    heading: "About Me",
-    description: "I think LLMs are changing everything. I want to help more people leverage these incredible tools. Open to technical and less technical roles. In person preferred, SF/other tech cities (flexible, would move for right gig). Will wear shirt to work. ",
+    heading: "Hire me?",
+    description: " Will wear shirt to work. ",
   },
 
   // Services/CTA section
   services: {
     heading: "Your Personal Website",
-    description: "Very simple: pay me less money than you'd pay squarespace, get a lesson in LLM coding + an awesome website. Email me jakesimonds@gmail.com, $100 for 2 hour session. You walk away with live website.",
+    description: "It's very simple: pay me less money than you'd pay squarespace for a lesson in LLM coding + a better website. You walk away with a live deployed website!",
+    button1Text: "book now!",
+    button1Link: "https://cal.com/jake-simonds/webmaster-crash-course",
+    button2Text: "more info",
+    button2Link: "https://jakesimonds.leaflet.pub/3m52lzrfojk2a",
   },
 
   // Connect section (final, with still image)
@@ -45,7 +49,7 @@ export const siteConfig = {
     description: "Friday afternoons 12-4 east coast US I hold open to connect with folks, come say hey!",
     image: "/connect.png",
     buttonText: "cal.com link",
-    buttonLink: "https://cal.com",
+    buttonLink: "https://cal.com/jake-simonds/chat-with-jake",
   },
 
   // Navigation labels
